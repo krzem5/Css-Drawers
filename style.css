@@ -1,0 +1,190 @@
+body{
+	background: #000;
+	margin: 0;
+	padding: 0;
+}
+body *{
+	user-select: none;
+	margin: 0;
+	padding: 0;
+}
+.dr-wr{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.dr-wr>.drs{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,-100%);
+	width: 1680px;
+	height: 645px;
+}
+.dr-wr>.drs>.drc{
+	position: relative;
+	top: 100%;
+	float: left;
+	width: 200px;
+	height: auto;
+	transform: translate(0,-100%);
+	background: #002880;
+	align-items: flex-end;
+	display: flex;
+	flex-direction: column-reverse;
+	border: solid 5px #000a62;
+	border-bottom-width: 10px;
+	border-top-right-radius: 7.5px;
+	border-top-left-radius: 7.5px;
+}
+.dr-wr>.drs>.drc>.dr{
+	position: relative;
+	left: -10px;
+	width: 180px;
+	background: #effcff;
+	margin-top: 10px;
+	border-radius: 5px;
+	transition: box-shadow 0.2s;
+}
+.dr-wr>.drs>.drc>.dr:nth-child(1){
+	margin-bottom: 10px;
+}
+.dr-wr>.drs>.drc>.dr.S{
+	height: 55px;
+}
+.dr-wr>.drs>.drc>.dr.T{
+	height: 80px;
+}
+.dr-wr>.drs>.drc>.dr:after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%,0);
+	height: 0;
+	width: 50px;
+	border-bottom: 18px solid;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	background: transparent;
+}
+.dr-wr>.drs>.drc>.dr.green:after{
+	border-bottom-color: #2fc900;
+}
+.dr-wr>.drs>.drc>.dr.blue:after{
+	border-bottom-color: #0751fa;
+}
+.dr-wr>.drs>.drc>.dr.red:after{
+	border-bottom-color: #f80a31;
+}
+.dr-wr>.drs>.drc>.dr.green:hover{
+	box-shadow: 0 0 10px #2fc900,0 0 10px #2fc900;
+}
+.dr-wr>.drs>.drc>.dr.blue:hover{
+	box-shadow: 0 0 10px #0751fa,0 0 10px #0751fa;
+}
+.dr-wr>.drs>.drc>.dr.red:hover{
+	box-shadow: 0 0 10px #f80a31,0 0 10px #f80a31;
+}
+.dr-wr>.drs>.drc>.dr.green.open{
+	box-shadow: 0 0 10px #2fc900,0 0 10px #2fc900,0 0 10px #2fc900,0 0 10px #2fc900;
+}
+.dr-wr>.drs>.drc>.dr.blue.open{
+	box-shadow: 0 0 10px #0751fa,0 0 10px #0751fa,0 0 10px #0751fa,0 0 10px #0751fa;
+}
+.dr-wr>.drs>.drc>.dr.red.open{
+	box-shadow: 0 0 10px #f80a31,0 0 10px #f80a31,0 0 10px #f80a31,0 0 10px #f80a31;
+}
+.dr-wr>.dr-dsp{
+	position:	absolute;
+	top: 155px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 0px;
+	width: 0px;
+	background: transparent;
+	border-radius: 20px;
+	transition: width 0.2s,height 0.2s,border-color 0.2s,background 0.2s;
+	border: solid 10px transparent;
+}
+.dr-wr>.dr-dsp.rv{
+	width: 570px;
+	height: 250px;
+	border-color: #000a62;
+	background: #dfecef;
+}
+.dr-wr>.dr-dsp:after{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 0px;
+	height: 0px;
+	background: transparent;
+	transition: background 0.2s,width 0.2s,height 0.2s,bottom 0.2s;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,70px);
+	grid-template-rows: repeat(auto-fill,70px);
+	overflow-y: scroll;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr::-webkit-scrollbar{
+	width: 10px;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 5px gray;
+	border-radius: 10px;
+	border-color: #dfecef;
+	border-width: 5px;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr::-webkit-scrollbar-thumb{
+	background: #00063a;
+	border-radius: 10px;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr::-webkit-scrollbar-thumb:hover{
+	background: #002880;
+}
+.dr-wr>.dr-dsp.rv:after{
+	height: 15px;
+	bottom: -15px;
+	width: 158px;
+}
+.dr-wr>.dr-dsp.rv.green:after{
+	background: #2fc900;
+}
+.dr-wr>.dr-dsp.rv.blue:after{
+	background: #0751fa;
+}
+.dr-wr>.dr-dsp.rv.red:after{
+	background: #f80a31;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr>.el{
+	width: 0px;
+	height: 0px;
+	margin: 5px;
+	border: solid 5px #002880;
+	border-radius: 10px;
+	transition: width 0.2s,height 0.2s;
+}
+.dr-wr>.dr-dsp.rv>.dr-dsp-wr>.el{
+	width: 50px;
+	height: 50px;
+}
+.dr-wr>.dr-dsp>.dr-dsp-wr>.el>.el-img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
