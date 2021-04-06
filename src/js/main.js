@@ -66,7 +66,6 @@ window.onload=function(){
 			}
 		}
 		d.onclick=function(){
-			var k=prd.classList.contains("rv")
 			prd.classList.remove("rv")
 			if (prd.classList.contains("prv")){
 				prd.classList.remove("prv")
